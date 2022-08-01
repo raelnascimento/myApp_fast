@@ -24,7 +24,7 @@ public class Item {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
      @Column(name = "id_Item")
-    private long id;
+    private Long id;
     
     @ManyToOne
     private Produto id_produto;
@@ -40,7 +40,7 @@ public class Item {
     public Item() {
     }
 
-    public Item(long id, Produto id_produto, BigDecimal qtd, String obs, BigDecimal valorUnitario) {
+    public Item(Long id, Produto id_produto, BigDecimal qtd, String obs, BigDecimal valorUnitario) {
         this.id = id;
         this.id_produto = id_produto;
         this.qtd = qtd;
@@ -48,11 +48,11 @@ public class Item {
         this.valorUnitario = valorUnitario;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

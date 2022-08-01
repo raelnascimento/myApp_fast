@@ -7,11 +7,13 @@ package com.israel.myApp.domain.repository;
 
 import com.israel.myApp.domain.model.Pedido;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 /**
  *
  * @author devsys-a
  */
+@Repository
 public interface PedidoRepository extends JpaRepository<Pedido, Long>{
     
 }

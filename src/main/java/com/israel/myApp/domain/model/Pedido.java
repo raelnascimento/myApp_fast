@@ -24,14 +24,19 @@ public class Pedido {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) 
     @Column(name = "id_pedido")
-    private long id;
+    private Long id;
     
     @ManyToOne
     private Cliente id_cliente;
     
+    @ManyToOne
+    private Item id_item;
+    
     @NotBlank
     @Size(max = 100)
     private String obs;
+    
+    private StatusPedido status;
     
     @NotBlank
     private LocalDateTime dataHoraPedido;
@@ -41,19 +46,28 @@ public class Pedido {
     public Pedido() {
     }
 
-    public Pedido(long id, Cliente id_cliente, String obs, LocalDateTime dataHoraPedido, LocalDateTime dataHoraEntrega) {
+    public Pedido(Long id, Cliente id_cliente, String obs, StatusPedido status, LocalDateTime dataHoraPedido, LocalDateTime dataHoraEntrega) {
         this.id = id;
         this.id_cliente = id_cliente;
         this.obs = obs;
+        this.status = status;
         this.dataHoraPedido = dataHoraPedido;
         this.dataHoraEntrega = dataHoraEntrega;
     }
+    
+    public StatusPedido getStatus() {
+        return status;
+    }
 
-    public long getId() {
+    public void setStatus(StatusPedido status) {
+        this.status = status;
+    }
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

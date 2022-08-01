@@ -23,7 +23,7 @@ public class Produto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) 
     @Column(name = "id_produto")
-    private long id;
+    private Long id;
     
     @NotBlank
     private String descricao;
@@ -34,17 +34,17 @@ public class Produto {
     public Produto() {
     }
 
-    public Produto(long id, String descricao, BigDecimal valorUnitario) {
+    public Produto(Long id, String descricao, BigDecimal valorUnitario) {
         this.id = id;
         this.descricao = descricao;
         this.valorUnitario = valorUnitario;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

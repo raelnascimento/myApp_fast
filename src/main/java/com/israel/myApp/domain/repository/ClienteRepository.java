@@ -7,11 +7,13 @@ package com.israel.myApp.domain.repository;
 
 import com.israel.myApp.domain.model.Cliente;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 /**
  *
  * @author devsys-a
  */
+@Repository
 public interface ClienteRepository extends JpaRepository<Cliente, Long>{
     
 }
