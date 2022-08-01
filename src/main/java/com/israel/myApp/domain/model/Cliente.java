@@ -22,7 +22,7 @@ public class Cliente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) 
     @Column(name = "id_cliente")
-    private long id;
+    private Long id;
     
     @NotBlank
     @Size(max = 100)
@@ -45,7 +45,7 @@ public class Cliente {
     public Cliente() {
     }
 
-    public Cliente(long id, String nome, String endereco, String cidade, String uf) {
+    public Cliente(Long id, String nome, String endereco, String cidade, String uf) {
         this.id = id;
         this.nome = nome;
         this.endereco = endereco;
@@ -53,7 +53,7 @@ public class Cliente {
         this.uf = uf;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
