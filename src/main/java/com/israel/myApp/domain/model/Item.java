@@ -18,12 +18,12 @@ import javax.validation.constraints.NotBlank;
  *
  * @author devsys-a
  */
-@Entity
+@Entity(name = "Item")
 public class Item {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-     @Column(name = "id_Item")
+    @Column(name = "id_item")
     private Long id;
     
     @ManyToOne
